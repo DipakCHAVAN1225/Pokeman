@@ -10,7 +10,7 @@ function Pokemon() {
   const [selectedType, setSelectedType] = useState("all");
   const [searchFocused, setSearchFocused] = useState(false);
 
-  const API = "https://pokeapi.co/api/v2/pokemon?limit=150";
+  const API = "https://pokeapi.co/api/v2/pokemon?limit=500";
 
   const fetchPokemon = async () => {
     try {
@@ -127,7 +127,7 @@ function Pokemon() {
         {searchPokemon.length === 0 ? (
           <div className="no-results">
             <span className="no-results-icon">🔍</span>
-            <p>No Pokémon found for <strong>"{search}"</strong></p>
+            <p>`No Pokémon found for <strong> {search}`</strong></p>
           </div>
         ) : (
           searchPokemon.map((poke, index) => (
